@@ -29,7 +29,7 @@ module.exports =
     if GrammarUtils.OperatingSystem.isDarwin()
       "File Based":
         command: "bash"
-        args: (context) -> ['-c', "xcrun clang -Wall -include stdio.h " + context.filepath + " -o /tmp/c.out && /tmp/c.out"]
+        args: (context) -> ['-c', "xcrun clang -Wall -include stdio.h \"" + context.filepath + "\" -o /tmp/c.out && /tmp/c.out"]
 
   'C++':
     if GrammarUtils.OperatingSystem.isDarwin()
